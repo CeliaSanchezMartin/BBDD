@@ -30,6 +30,7 @@ connection.query(sql, function (err, res){
     }
 });
 
+
 //Reto 2.
 //Obtén todos los nombres y apellidos de los profesores y 
 //los nombres de las asignaturas  que imparten.
@@ -43,6 +44,7 @@ connection.query(sql, function (err, res){
     }
 });
 */
+
 //Reto 3.
 //Obtén el número total de alumnos por asignatura, 
 //el nombre de la asignatura y el nombre y apellidos del profesor que la imparte.

@@ -50,7 +50,7 @@ function postAlumno(request, response){
 
 function putAlumno(request,response){
    
-let id = request.query.id;
+let id = request.body.id;
     let params = [
         request.body.firts_name,
         request.body.last_name,
@@ -75,7 +75,7 @@ let id = request.query.id;
 };
 
 function deleteAlumno(request, response){
-    let id = request.query.id;
+    let id = request.body.id;
     let params = [id];
     let sql = "DELETE FROM students WHERE student_id = ?";
 

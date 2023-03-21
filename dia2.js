@@ -29,6 +29,7 @@ connection.query(sql, function(err, res){
         console.log(res);
     }
 });
+
 //Calcular el numero total de alumnos.
 let sql = "SELECT COUNT (*) FROM students"
 connection.query(sql, function(err, res){
@@ -39,6 +40,7 @@ connection.query(sql, function(err, res){
         console.log(res);
     }
 });
+
 
 //Lista groups
 let sql = "SELECT group_id, name FROM grupos"
@@ -88,6 +90,7 @@ connection.query(sql, function(err, res){
     }
 });
 
+
 //Calcula el número de profesores que hay por asignatura.
 let sql = "SELECT subject_id, COUNT(*) AS subject_teacher FROM subject_teacher GROUP BY subject_id"
 connection.query(sql, function(err, res){
@@ -98,6 +101,7 @@ connection.query(sql, function(err, res){
         console.log(res);
     }
 });
+
 
 //Reto 2.
 //Obtén el id y la nota de los alumnos que tengan un id entre 1 y 20, o que tenga una nota
@@ -111,6 +115,7 @@ connection.query(sql, function(err, res){
         console.log(res);
     }
 });
+
 
 //Obtén la media de las notas que se han dado en el último año por asignatura.
 let sql = "SELECT AVG(mark), subject_id FROM marks WHERE date > '2022-01-01' GROUP BY subject_id"
@@ -135,3 +140,4 @@ connection.query(sql, function(err, res){
         console.log(res);
     }
 });
+

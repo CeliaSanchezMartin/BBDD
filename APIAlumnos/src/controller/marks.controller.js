@@ -10,7 +10,7 @@ function getStart(request, response){
 function getMedia(request, response){
     let id = request.query.id;
     let params = [id];
-    let sql = "SELECT AVG (mark) AS media_alumno FROM marks WHERE student_id = ? ";
+    let sql = "SELECT AVG(mark) AS media_alumno FROM marks WHERE student_id = ? ";
 
     connection.query(sql, params, function(error, result){
         if(error){
